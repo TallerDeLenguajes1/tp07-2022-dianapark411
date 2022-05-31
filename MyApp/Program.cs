@@ -35,10 +35,10 @@ for (int i = 0; i < cantTareas; i++){
     Console.WriteLine($"La tarea {i} fue realizada? Ingrese 1 para SI o 0 para NO: ");
     int opcion  = Convert.ToInt32(Console.ReadLine());
     if(opcion == 1){
-        tareasRealizadas.Insert(i, new Tarea() {tareaID = tareasPendientes[i].tareaID, descripcion = tareasPendientes[i].descripcion , duracion = tareasPendientes[i].duracion });
+        tareasRealizadas.Add(new Tarea() {tareaID = tareasPendientes[i].tareaID, descripcion = tareasPendientes[i].descripcion , duracion = tareasPendientes[i].duracion });
 
         tareasPendientes.RemoveAt(i);
-        
+
         //tareasPendientes.TrimExcess(); ????????
     }
 }
